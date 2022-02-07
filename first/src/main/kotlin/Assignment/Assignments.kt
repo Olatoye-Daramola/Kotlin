@@ -49,7 +49,8 @@ fun questionFour() {
        println("\nQuestion 4")
 
        var character = scanner.next()
-       println("The ASCII value is ${character.toInt()}")
+
+       println("The ASCII value is ${character.single().code}")
 }
 
 // QUESTION 5
@@ -238,20 +239,50 @@ fun questionSixteen() {
 fun questionSeventeen() {
     println("\nQUESTION 17")
 
-    // println("Enter first number")
-    // var numOne = scanner.nextInt()
+    println("Enter first number")
+    var numOne = scanner.nextInt()
 
-    // println("Enter second number")
-    // var numTwo = scanner.nextInt()
+    println("Enter second number")
+    var numTwo = scanner.nextInt()
 
-    // for (i = 1; i <= numOne && counter <= numTwo) {
+    val multiplication = numOne * numTwo; var lcm = 0
 
-    // }
+    first@for (i in numOne..multiplication) {
+        if ((i % numOne == 0 && i % numTwo == 0) && i > lcm) {
+            lcm = i
+            break@first
+        }
+    }
+
+    var gcd = multiplication / lcm
+
+
+    println(multiplication)
+    println(lcm)
+
+    println("The GCD is: $gcd")
 }
 
 // QUESTION 18
 fun questionEighteen() {
     println("\nQUESTION 18")
+
+    println("Enter first number")
+    var numOne = scanner.nextInt()
+
+    println("Enter second number")
+    var numTwo = scanner.nextInt()
+
+    val multiplication = numOne * numTwo; var lcm = 0
+
+    first@for (i in numOne..multiplication) {
+        if ((i % numOne == 0 && i % numTwo == 0) && i > lcm) {
+            lcm = i
+            break@first
+        }
+    }
+
+    println("LCM is: $lcm")
 }
 
 // QUESTION 19
@@ -294,6 +325,7 @@ fun questionTwentyOne() {
         reverse += newNum
         num /= 10
     }
+    // reverse.toInt()
     println("Reverse of $savedNum is $reverse")
 }
 
@@ -340,7 +372,7 @@ fun main(args: Array<String>) {
     // questionFourteen()
     // questionFifteen()
     // questionSixteen()
-    // questionSeventeen()
+    questionSeventeen()
     // questionEighteen()
     // questionNineteen()
     // questionTwenty()
