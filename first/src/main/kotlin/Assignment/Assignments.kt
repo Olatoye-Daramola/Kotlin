@@ -354,7 +354,9 @@ fun questionTwentyTwo() {
 
 
 
-fun main(args: Array<String>) {
+
+
+fun main() {
 
     // questionOne()
     // questionTwo()
@@ -372,7 +374,7 @@ fun main(args: Array<String>) {
     // questionFourteen()
     // questionFifteen()
     // questionSixteen()
-    questionSeventeen()
+    // questionSeventeen()
     // questionEighteen()
     // questionNineteen()
     // questionTwenty()
